@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 public class QueueReconstructionByHeightTest {
     QueueReconstructionByHeight queueReconstructionByHeight = new QueueReconstructionByHeight();
 
+    // region 方法一的测试
     @Test
     public void taller_first_test_case1() {
         int[][] people = new int[][]{
@@ -47,7 +48,9 @@ public class QueueReconstructionByHeightTest {
         };
         Assertions.assertArrayEquals(expected, queueReconstructionByHeight.reconstructQueueTallerFirst(people));
     }
+    // endregion
 
+    // region 方法二的测试
     @Test
     public void shorter_first_test_case1() {
         int[][] people = new int[][]{
@@ -89,4 +92,5 @@ public class QueueReconstructionByHeightTest {
         };
         Assertions.assertArrayEquals(expected, queueReconstructionByHeight.reconstructQueueShorterFirst(people));
     }
+    // endregion
 }
